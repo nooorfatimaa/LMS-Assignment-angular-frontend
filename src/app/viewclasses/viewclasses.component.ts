@@ -16,11 +16,11 @@ export class ViewclassesComponent implements OnInit {
   }
 
 getclasses(){
-  this._data.viewclasses().subscribe(
+  this._data.viewClasses().subscribe(
           data => { this.classes = data},
           err => console.error(err),
           () => console.log(this.classes)
       );
-    
+
 }
 }

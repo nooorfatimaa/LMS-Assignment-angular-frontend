@@ -37,9 +37,8 @@ baseUrl="http://localhost:3000/admin/";
     let url=this.baseUrl+ "addstudent";
     return this.http.post(url,body,httpOptions);
   }
-  viewclasses(){
-    console.log(httpOptions);
-    let url=this.baseUrl+ "classes";
+  viewClasses(){
+    let url = "http://localhost:3000/admin/class";
     return this.http.get(url,httpOptions);
   }
   userslist(){
