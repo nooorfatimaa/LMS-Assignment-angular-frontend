@@ -2,7 +2,7 @@
     <div class="container">
             <div class="row">
                 <div class="col">
-                    <a class="navbar-brand" routerLink="dashboard"><img src="../../assets/img/logo.jpg" alt="LMS" height="40" width="41"></a> 
+                    <a class="navbar-brand" routerLink="dashboard"><img src="../../assets/img/logo.jpg" alt="LMS" height="40" width="41"></a>
                     <div ngbDropdown class="d-inline-block">
                     <button class="btn" id="classes" ngbDropdownToggle>Class Management</button>
                     <div ngbDropdownMenu aria-labelledby="classes">
@@ -21,6 +21,9 @@
                     <button ngbDropdownItem><a routerLink="viewteachers">View Teachers</a></button>
                     <button ngbDropdownItem>View Teacher</button>
                     <button ngbDropdownItem>Remove Teacher</button>
+                    <button ngbDropdownItem><a routerLink="addassignment">Add Assignment</a></button>
+                    <button ngbDropdownItem><a routerLink="viewassignment">View Assignment</a></button>
+                    <button ngbDropdownItem><a routerLink="deleteassignment">Delete Assignment</a></button>
                     </div>
                 </div>
                 <div ngbDropdown class="d-inline-block">
@@ -33,21 +36,21 @@
                     </div>
                 </div>
                 <div class="d-inline-block">
-                    <button class="btn"><a routerLink="concepts">Concepts</a></button>  
+                    <button class="btn"><a routerLink="concepts">Concepts</a></button>
                 </div>
                 <div class="d-inline-block">
-                    <button class="btn"><a routerLink="users">View Users</a></button>  
+                    <button class="btn"><a routerLink="users">View Users</a></button>
                 </div>
                 <div class="d-inline-block" *ngIf="tokenstatus">
-                    <button class="btn"><a routerLink="login">Signin</a></button>  
+                    <button class="btn"><a routerLink="login">Signin</a></button>
                 </div>
                 <div class="d-inline-block" *ngIf="!tokenstatus">
-                    <button class="btn" (click)="logout()">Logout</button>  
+                    <button class="btn" (click)="logout()">Logout</button>
                 </div>
                 <div class="d-inline-block">
-                    Welcome Mr. {{username}} 
+                    Welcome Mr. {{username}}
                 </div>
-                
+
             </div>
         </div>
     </div>

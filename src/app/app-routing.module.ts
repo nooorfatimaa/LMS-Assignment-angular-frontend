@@ -11,6 +11,9 @@ import { AddteacherComponent } from './addteacher/addteacher.component';
 import { AddstudentComponent } from './addstudent/addstudent.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {ViewAssignmentComponent} from './view-assignment/view-assignment.component';
+import {DeleteAssignmentComponent} from './delete-assignment/delete-assignment.component';
+import {AddAssignmentComponent} from './add-assignment/add-assignment.component';
 
 const routes: Routes = [
   {
@@ -56,6 +59,18 @@ const routes: Routes = [
   {
     path:'users',
     component:ListusersComponent
+  },
+  {
+    path:'addassignment',
+    component:AddAssignmentComponent
+  },
+  {
+    path:'viewassignment',
+    component:ViewAssignmentComponent
+  },
+  {
+    path:'deleteassignment',
+    component:DeleteAssignmentComponent
   }
 ];
 

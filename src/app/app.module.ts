@@ -10,7 +10,7 @@ import { ConceptsComponent } from './concepts/concepts.component';
 import { AddclassComponent } from './addclass/addclass.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+//import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ViewclassesComponent } from './viewclasses/viewclasses.component';
 import { ViewteachersComponent } from './viewteachers/viewteachers.component';
 import { AddteacherComponent } from './addteacher/addteacher.component';
@@ -54,7 +54,7 @@ import { DeleteAssignmentComponent } from './delete-assignment/delete-assignment
     FontAwesomeModule,
     FormsModule,
     NgbModule,
-    BrowserAnimationsModule,
+    //BrowserAnimationsModule,
     HttpClientModule,RouterModule,
     FlashMessagesModule.forRoot()
   ],
