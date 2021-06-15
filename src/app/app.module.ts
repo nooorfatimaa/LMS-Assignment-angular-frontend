@@ -24,6 +24,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';  // replaces previous Http service
 import {FlashMessagesModule} from 'angular2-flash-messages';
 import { RouterModule } from '@angular/router';
+import { ViewAssignmentComponent } from './view-assignment/view-assignment.component';
+import { AddAssignmentComponent } from './add-assignment/add-assignment.component';
+import { DeleteAssignmentComponent } from './delete-assignment/delete-assignment.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { RouterModule } from '@angular/router';
     AddstudentComponent,
     DashboardComponent,
     LoginComponent,
+    ViewAssignmentComponent,
+    AddAssignmentComponent,
+    DeleteAssignmentComponent,
   ],
   imports: [
     BrowserModule,
