@@ -1,1 +1,27 @@
-<p>view-assignment works!</p>
+<br>
+<h1>Assignments List</h1>
+<br>
+  <div class="table-responsive">
+      <table class="table table-striped">
+          <thead class="thead-light">
+              <tr>
+                  <th>Assignment No.</th>
+                  <th>Assignment Course</th>
+                  <th>Assigned to Class </th>
+                  <th>Questions</th>
+                  <th>Assignment Marks</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let assignment of assignments">
+                  <td>{{assignment.number}}</td>
+                  <td>{{assignment.name}}</td>
+                  <td>{{assignment.class.name}}</td>
+                  <td>{{assignment.questions}}</td>
+                  <td>{{assignment.marks}}</td>
+              </tr>
+          </tbody>
+      </table>
+</div>
+<br>
+<br>
