@@ -1,1 +1,20 @@
-<p>delete-assignment works!</p>
+<br>
+<h1>Select an assignment from the dropdown list to delete</h1>
+<br>
+<div class="container">
+  <form (ngSubmit)="delete()" >
+    <div class="form-group mt-5">
+      <label for="select1">Select assignment:</label>
+      <select class="form-control" [(ngModel)]="aID">
+        <option *ngFor="let assignment of assignments" value ={{assignment._id}} >Assignment {{assignment.number}}&nbsp;{{assignment.name}}&nbsp;{{assignment.class.name}}</option>
+      </select>
+    </div>
+    <div class="form-group mt-5 offset-5">
+      <button type="submit" class="btn btn-info">Delete Assignment</button>
+    </div>
+  </form>
+</div>
+<br>
+<br>
+<br>
+

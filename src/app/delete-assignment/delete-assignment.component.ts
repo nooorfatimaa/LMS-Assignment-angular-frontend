@@ -9,10 +9,13 @@ import { DataService } from '../data.service';
 export class DeleteAssignmentComponent implements OnInit {
 
   public assignments;
+  aID;
+  assignment;
 
   constructor(private _data:DataService) { }
 
   ngOnInit(): void {
+    this.getAssignments()
   }
 
   getAssignments() {
@@ -21,6 +24,16 @@ export class DeleteAssignmentComponent implements OnInit {
       err => console.error(err),
       () => console.log('Assignments received')
     );
+  }
+
+  delete(){
+    this._data.deleteAssignment(this.aID).subscribe(data => {
+      this.assignment = data},
+      err => console.error(err),
+      () => console.log('Assignment deleted')
+    );
+    this.aID = "";
+    window.location.reload();
   }
 
 }
