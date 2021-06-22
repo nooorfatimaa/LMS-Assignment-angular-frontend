@@ -16,11 +16,11 @@ const httpOptions = {
 })
 
 export class DataService {
-baseUrl="http://localhost:3000/admin/";
+baseUrl="http://localhost:5000/admin/";
   constructor(private http:HttpClient) {  }
 
   viewteachers(){
-    let url=this.baseUrl+ "teachers";
+    let url=this.baseUrl+ "teacher";
     return this.http.get(url,httpOptions);
   }
   addteacher(teacher){
@@ -29,7 +29,7 @@ baseUrl="http://localhost:3000/admin/";
     return this.http.post(url,body,httpOptions);
   }
   viewstudents(){
-    let url=this.baseUrl+ "students";
+    let url=this.baseUrl+ "student";
     return this.http.get(url,httpOptions);
   }
   addstudent(student){
@@ -38,7 +38,7 @@ baseUrl="http://localhost:3000/admin/";
     return this.http.post(url,body,httpOptions);
   }
   viewClasses(){
-    let url = "http://localhost:3000/admin/class";
+    let url = "http://localhost:5000/admin/class";
     return this.http.get(url,httpOptions);
   }
   userslist(){
@@ -48,15 +48,15 @@ baseUrl="http://localhost:3000/admin/";
   }
   addAssignment(assignment) {
     let body = JSON.stringify(assignment);
-    let url = "http://localhost:3000/teacher/addassignment";
+    let url = "http://localhost:5000/teacher/addassignment";
     return this.http.post(url, body, httpOptions);
   }
   viewAssignment() {
-    let url = "http://localhost:3000/teacher/assignments";
+    let url = "http://localhost:5000/teacher/assignments";
     return this.http.get(url, httpOptions);
   }
   deleteAssignment(assignment) {
-    let url = "http://localhost:3000/teacher/deleteassignment/"+assignment;
+    let url = "http://localhost:5000/teacher/deleteassignment/"+assignment;
     return this.http.delete(url, httpOptions);
   }
 }
